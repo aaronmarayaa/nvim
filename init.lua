@@ -13,7 +13,8 @@ local rtp = vim.opt.rtp
 rtp:prepend(lazypath)
 require("lazy").setup({
   require("plugins.neo-tree"),
-  require("plugins.colortheme"),
+  -- require("plugins.colortheme"),
+  require("plugins.colorscheme.rose-pine"),
   require("plugins.bufferline"),
   require("plugins.lualine"),
   require("plugins.treesitter"),
