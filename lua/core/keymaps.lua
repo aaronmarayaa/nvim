@@ -6,10 +6,10 @@ vim.keymap.set("v", "<A-j>", ":m '>+1<CR>gv=gv", { desc = "Move selection down",
 vim.keymap.set("v", "<A-k>", ":m '<-2<CR>gv=gv", { desc = "Move selection up", silent = true })
 
 -- Duplicate line below (like Shift+Alt+Down)
-vim.keymap.set("n", "<S-A-Down>", "yyp", { desc = "Duplicate line below" })
+vim.keymap.set("n", "<S-A-j>", "yyp", { desc = "Duplicate line below" })
 
 -- Duplicate line above (like Shift+Alt+Up)
-vim.keymap.set("n", "<S-A-Up>", "yyP", { desc = "Duplicate line above" })
+vim.keymap.set("n", "<S-A-k>", "yyP", { desc = "Duplicate line above" })
 
 -- Set leader key
 vim.g.mapleader = ' '
@@ -22,6 +22,8 @@ vim.keymap.set("n", "<leader>le", ":LiveServerStop<CR>", { desc = "Live Server S
 
 
 vim.keymap.set("n", "<leader>de", '"_dd', { desc = "Delete line without yanking" })
+
+vim.keymap.set("n", "<leader>yz", ":Yazi<CR>", { desc = "Open Yazi" })
 
 -- For conciseness
 local opts = { noremap = true, silent = true }
