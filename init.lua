@@ -29,5 +29,6 @@ require("lazy").setup({
   require("plugins.yazi"),
   require("plugins.render-markdown"),
   require("plugins.live-server"),
-  require("plugins.vim-surround")
+  require("plugins.surround"),
+  require("plugins.bracket-colorizer")
 })

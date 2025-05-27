@@ -1,4 +1,11 @@
 -- Keymaps for better default experience
+
+-- For conciseness
+local opts = { noremap = true, silent = true }
+-- Set leader key
+vim.g.mapleader = ' '
+vim.g.maplocalleader = ' '
+
 -- move the line up or down
 vim.keymap.set("n", "<A-j>", ":m .+1<CR>==")
 vim.keymap.set("n", "<A-k>", ":m .-2<CR>==")
@@ -11,9 +18,10 @@ vim.keymap.set("n", "<S-A-j>", "yyp", { desc = "Duplicate line below" })
 -- Duplicate line above (like Shift+Alt+Up)
 vim.keymap.set("n", "<S-A-k>", "yyP", { desc = "Duplicate line above" })
 
--- Set leader key
-vim.g.mapleader = ' '
-vim.g.maplocalleader = ' '
+-- remove leading whitespace
+vim.keymap.set('n', '<leader>cl', [[:s/^\s\+//<CR>]])
+-- remove trailing whitespace
+vim.keymap.set('n', '<leader>ct', [[:s/\s\+$//<CR>]])
 
 -- live server start and stop
 vim.keymap.set("n", "<leader>al", ":LiveServerStart<CR>", { desc = "Live Server Start" })
@@ -23,10 +31,8 @@ vim.keymap.set("n", "<leader>le", ":LiveServerStop<CR>", { desc = "Live Server S
 
 vim.keymap.set("n", "<leader>de", '"_dd', { desc = "Delete line without yanking" })
 
+-- yazi
 vim.keymap.set("n", "<leader>yz", ":Yazi<CR>", { desc = "Open Yazi" })
-
--- For conciseness
-local opts = { noremap = true, silent = true }
 
 -- Disable the spacebar key's default behavior in Normal and Visual modes
 vim.keymap.set({ 'n', 'v' }, '<Space>', '<Nop>', { silent = true })
